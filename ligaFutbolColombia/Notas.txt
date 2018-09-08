@@ -1,0 +1,27 @@
+Resumen Javascript
+
+Tipos de variables: string, number, boolean, array y object
+
+"Todo en JavaScript es un objeto y puede ser almacenado en una variable"
+
+Operadores: simbolo matematico y logicos
+matematicos eje +,-
+logicos &, ||
+
+Utilizar promesas en lugar de if, else
+
+Funciones: manera de encapsular codigo
+
+Eventos: Estructuras de codigo que captan lo que sucede en el navegador, y permite que de una respuesta a una accion
+
+ciclos
+
+developer mozilla
+https://developer.mozilla.org/
+
+otros
+https://html-css-js.com
+
+camel case: reglas de uso de los lenguajes de programacion
+
+id: se usa cuando se requiere un elemento unico
