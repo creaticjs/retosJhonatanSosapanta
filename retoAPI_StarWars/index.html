@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A quien te pareces Star Wars</title>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="http://2.bp.blogspot.com/-MzfC48c0u70/Vf3Yyay9ecI/AAAAAAAAC6g/T6yWvFNmgkI/s1600/stormtrooper_helmet___star_wars_vector_by_firedragonmatty-d8752th.png">
+</head>
+<body>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                <H1>¿A QUIÉN TE PARECES?</H1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png" width="200" height="100">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">¡Buscar el personaje de <strong>STAR WARS</strong> al que más te pareces!</h5>
+              <BR>
+              <BR>
+              <div class="row">
+                <div class="col-md-4">
+                    <p class="card-text">Ingresa los siguientes datos</p>
+                    <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="user" placeholder="Usuario GitHub" name="user" value="">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="number" class="form-control" id="estatura" name="estatura" placeholder="Estatura">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="number" class="form-control" id="peso" name="peso" placeholder="Peso">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Seleccionar color de ojos</label>
+                            <select class="form-control" id="colorojos" name="colorojos">
+                              <option>Azules</option>
+                              <option>Rojos</option>
+                              <option>Amarillos</option>
+                              <option>Marrones</option>
+                            </select>
+                          </div>
+                        <input type="button" onclick="reiniciarJuego()" class="btn btn-secondary" value="REINICIAR">
+                        <input type="button" onclick="getRequestGit()" class="btn btn-success" value="BUSCAR">
+                      </form>
+                       <!-- <div class="col-md-2"><button onclick="getRequestGit()" type="button" class="btn btn-success">Buscar Información</button></div> -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" id="avatar" src="" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title" id="nombre">No tiene</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item" id="Estatura">No tiene</li>
+                          <li class="list-group-item" id="Peso">No tiene</li>
+                          <li class="list-group-item" id="Colorojos">No tiene</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" id="vermas" class="card-link">Ver más</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" id="avatar" src="" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title" id="nombre">No tiene</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item" id="company">No tiene</li>
+                          <li class="list-group-item" id="company">No tiene</li>
+                          <li class="list-group-item" id="location">No tiene</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" id="vermas" class="card-link">Ver más</a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+          <!-- <div id="contenedorform" style="display: none"> -->
+      <!-- </div> display:none--> 
+            </div>
+            <div class="card-footer text-muted">
+              Desarrollado por Jhonatan Sosapanta
+            </div>
+          </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
