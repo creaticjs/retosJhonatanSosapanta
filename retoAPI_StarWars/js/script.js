@@ -1,43 +1,73 @@
-var datosperfil={};
+var personajes=[];
+var nombrePersonajes = "";
+var peliculas=[];
+var nombrePeliculas = "";
+var planetas=[];
+var especie=[];
 
-function getRequestGit(){
-    var nombre = document.getElementById('user').value;
-    var estatura = document.getElementById('estatura').value;
-    var peso = document.getElementById('peso').value;
-    var colorojos = document.getElementById('colorojos').value;
-    alert(colorojos);
-    var peticion  = new  XMLHttpRequest();
-    peticion.onreadystatechange = function(){
-        if (this.readyState == 4 && this.status == 200) {
-            datosperfil = JSON.parse(this.responseText)
-            // document.getElementById("contenedorform").style.display = "block";
-            var imagen=document.getElementById('avatar');
-            imagen.setAttribute('src',datosperfil.avatar_url)
-            document.getElementById('nombre').innerHTML = datosperfil.name
-            document.getElementById('Estatura').innerHTML = estatura + " cm"
-            document.getElementById('Peso').innerHTML = peso + "kg"
-            document.getElementById('Colorojos').innerHTML = "Ojos " + colorojos
-            console.log(datosperfil);
+function getP(url, callback){
+    var httpX = new XMLHttpRequest();
+        httpX.onload = function(){
+        if(callback){
+            callback(JSON.parse(this.responseText));  
         }
     }
-    peticion.open('GET','https://api.github.com/users/' + nombre,true);
-    peticion.send();
-
-    document.getElementById('vermas').href = "https://github.com/" + nombre;
-}
-
-function renderRepositorios(url){
-    var data = [];
-    var req = new XMLHttpRequest();
-    req.onreadystatechange = function(){
-        if(this.readyState==4 && this.status == 200){
-            data = JSON.parse(this.responseText);
-            document.getElementById('repositorios').innerHTML = this.responseText;
-        }
+    httpX.onerror = function(){
+        console.log(Error('Error 🤮'));
     }
-    req.open('GET',url,true);
-    req.send();
+    httpX.open('GET',url,true);
+    httpX.send();
 }
+
+getP('https://swapi.co/api/people/',function(data){
+        // console.log(data.results);
+        personajes.push(data.results);
+
+        personajes.forEach(item => {
+            let array = Array.from(item)
+
+            for (var i = 0; i < array.length; i++) {
+                nombrePersonajes = array[i].name
+
+                var miSelect = document.getElementById("miSelect");
+
+                // Creamos un objeto option
+                var miOption = document.createElement("option");
+
+                // Añadimos las propiedades value y label
+                miOption.setAttribute("value", nombrePersonajes);
+                miOption.setAttribute("label", nombrePersonajes);
+
+                // Añadimos el option al select
+                miSelect.appendChild(miOption);
+            }
+
+        });
+
+        getP('https://swapi.co/api/films/',function(data2){
+                // console.log(data2.results);
+                peliculas.push(data2.results);
+
+                peliculas.forEach(item2 => {
+                    let array = Array.from(item2)
+                    for(var i=0; i<array.length;i++){
+                        nombrePeliculas=array[i].title
+                        // console.log(nombrePeliculas)
+                    }
+        
+                });
+
+                getP('https://swapi.co/api/planets/',function(data3){
+                        // console.log(data3.results);
+                        planetas.push(data3);
+
+                        getP('https://swapi.co/api/species/',function(data4){
+                            //    console.log(data4.results);
+                               especie.push(data4);
+                        });
+                })
+        });
+});
 
 function reiniciarJuego(){
 	location.reload();

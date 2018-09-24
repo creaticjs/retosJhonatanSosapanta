@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Ajax</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Perfil</h1>
+                <div id="renderajax">
+                    <img class="rounded mx-auto d-block" width="50%" id="avatar" src="" alt="">
+                    <h4 id="nombre"></h4>
+                    <p id="bio"></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre id="repositorios">
+
+                </pre>
+            </div>
+        </div>
+        <div class="row">
+            <button onclick="getRequestGit()" type="button" class="btn btn-success">Traer datos</button>
+        </div>
+    </div>
+
+    
+    <script>
+        var datosperfil={};
+        
+        function getRequestGit(){
+            var peticion  = new  XMLHttpRequest();
+            peticion.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                    datosperfil = JSON.parse(this.responseText)
+                    document.getElementById('nombre').innerHTML = datosperfil.name
+                    document.getElementById('bio').innerHTML = datosperfil.bio
+                    var imagen=document.getElementById('avatar');
+                    imagen.setAttribute('src',datosperfil.avatar_url)
+                    console.log(datosperfil);
+                    renderRepositorios(datosperfil.repos_url);
+                }
+            }
+            peticion.open('GET','https://api.github.com/users/carlosmolano',true);
+            peticion.send();
+        }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            console.log("pagina Cargada🤠");
+            getRequestGit();
+        });
+        function renderRepositorios(url){
+            var data = [];
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function(){
+                if(this.readyState==4 && this.status == 200){
+                    data = JSON.parse(this.responseText);
+                    document.getElementById('height').innerHTML = this.responseText;
+                }
+            }
+            req.open('GET',url,true);
+            req.send();
+        }
+    </script>
+</body>
+</html>
