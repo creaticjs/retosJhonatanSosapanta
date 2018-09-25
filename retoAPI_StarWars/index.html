@@ -16,35 +16,37 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png" width="200" height="100">
             </div>
             <div class="card-body">
-              <h5 class="card-title">¡Lista completa de los personajes de <strong>STAR WARS</strong></h5>
+              <h5 class="card-title">Busca el personaje <strong>STAR WARS</strong> que mas te gusta</h5>
               <BR>
               <BR>
               <div class="row">
-                <label class="col-md-12" for="exampleFormControlSelect1">Seleccionar el personaje</label>
                 <div class="col-md-12 select">
                             <div class="col-md-3">
-                              <select class="form-control" id="miSelect" name="miSelect">
+                              <select class="form-control" id="miSelect" onchange="myFunction()">
+                              <option value="inicio">Selecciona el personaje</option>
                               </select>
                             </div class="col-md-2">
                             <div>
                               <input type="button" onclick="reiniciarJuego()" class="btn btn-warning" value="REINICIAR">
-                              <!-- <input type="button" onclick="getRequestGit()" class="btn btn-success" value="BUSCAR"> -->
+                              <!-- <input type="button" onclick="buscar()" class="btn btn-success" value="BUSCAR"> -->
                             </div>
                 </div>
                 <br/>
+                <div class="col-md-12 select" id="info" style="visibility: hidden">
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" id="avatar" src="" alt="Card image cap">
+                        <img class="card-img-top" id="avatar" name="avatar" src="" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title" id="nombre">No tiene</h5>
+                          <h5 class="card-title">Datos personales del personaje</h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item" id="Estatura">No tiene</li>
-                          <li class="list-group-item" id="Peso">No tiene</li>
-                          <li class="list-group-item" id="Colorojos">No tiene</li>
+                          <li class="list-group-item" id="nombre">No tiene</li>
+                          <li class="list-group-item" id="estatura">No tiene</li>
+                          <li class="list-group-item" id="peso">No tiene</li>
+                          <li class="list-group-item" id="colorojos">No tiene</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" id="vermas" class="card-link">Ver más</a>
+                            <a href="#" id="vermas" onclick="reiniciarJuego()" class="card-link">Ver más personajes</a>
                         </div>
                       </div>
                 </div>
@@ -52,16 +54,13 @@
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" id="avatar2" src="" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title" id="name">No tiene</h5>
+                          <h5 class="card-title" id="name">Pelicula</h5>
                         </div>
                         <ul class="list-group list-group-flush">
                           <li class="list-group-item" id="height">No tiene</li>
                           <li class="list-group-item" id="mass">No tiene</li>
                           <li class="list-group-item" id="eye_color">No tiene</li>
                           <li class="list-group-item" id="films">No tiene</li>
-                          <li class="list-group-item" id="species">No tiene</li>
-                          <li class="list-group-item" id="vehicles">No tiene</li>
-                          <li class="list-group-item" id="starships">No tiene</li>
                         </ul>
                         <div class="card-body">
                           <a href="#" id="vermas" class="card-link">Ver más</a>
@@ -72,16 +71,13 @@
                   <div class="card" style="width: 18rem;">
                       <img class="card-img-top" id="avatar2" src="" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title" id="name">No tiene</h5>
+                        <h5 class="card-title" id="name">Planeta</h5>
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item" id="height">No tiene</li>
                         <li class="list-group-item" id="mass">No tiene</li>
                         <li class="list-group-item" id="eye_color">No tiene</li>
                         <li class="list-group-item" id="films">No tiene</li>
-                        <li class="list-group-item" id="species">No tiene</li>
-                        <li class="list-group-item" id="vehicles">No tiene</li>
-                        <li class="list-group-item" id="starships">No tiene</li>
                       </ul>
                       <div class="card-body">
                         <a href="#" id="vermas" class="card-link">Ver más</a>
@@ -89,6 +85,7 @@
                     </div>
               </div>
               </div>
+            </div>
           <!-- <div id="contenedorform" style="display: none"> -->
       <!-- </div> display:none--> 
             </div>
@@ -98,10 +95,5 @@
           </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
-       $(document).on('change', '#miSelect', function(event) {
-         alert("eNTRO")
-});
-    </script>
 </body>
 </html>
