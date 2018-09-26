@@ -43,26 +43,6 @@ getP('https://swapi.co/api/people/',function(data){
                 // Añadimos el option al select
                 miSelect.appendChild(miOption);
             }
-
-        });
-
-        getP('https://swapi.co/api/films/',function(data2){
-                // console.log(data2.results);
-                peliculas.push(data2.results);
-
-                peliculas.forEach(item2 => {
-                    let array = Array.from(item2)
-                    for(var i=0; i<array.length;i++){
-                        nombrePeliculas=array[i].title
-                        // console.log(nombrePeliculas)
-                    }
-        
-                });
-
-                getP('https://swapi.co/api/planets/',function(data3){
-                        // console.log(data3.results);
-                        planetas.push(data3);
-                })
         });
 });
 
@@ -70,16 +50,18 @@ getP('https://swapi.co/api/people/',function(data){
 function myFunction() {
     document.getElementById("info").style.visibility = "visible";
     var url = document.getElementById("miSelect").value;
-    renderRepositorios(url);
+    repositorioPersonajes(url);
 }
 
 //Buscar datos personales personaje con ajax
-function renderRepositorios(url){
+function repositorioPersonajes(url){
     var data = [];
     var req = new XMLHttpRequest();
     req.onreadystatechange = function(){
         if(this.readyState==4 && this.status == 200){
             data = JSON.parse(this.responseText);
+            debugger
+            repositorioPeliculas(data.films[0])
 
             if(data.name === "Luke Skywalker"){
                 document.getElementById("avatar").src= "./assets/img/personaje1.jpg";
@@ -119,6 +101,96 @@ function renderRepositorios(url){
         }
     }
     req.open('GET',url,true);
+    req.send();
+}
+
+//Buscar datos de peliculas con ajax
+function repositorioPeliculas(films){
+    var data = [];
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function(){
+        if(this.readyState==4 && this.status == 200){
+            data = JSON.parse(this.responseText);
+            debugger
+            repositorioPlanetas(data.planets[0])
+
+            switch(data.title){
+                case "A New Hope":
+                     document.getElementById('avatar2').src= "./assets/img/pelicula1_7.jpg";
+                     break;
+                case "The Empire Strikes Back":
+                     document.getElementById('avatar2').src= "./assets/img/pelicula1_1.jpg";
+                     break;
+                case "Return of the Jedi":
+                     document.getElementById('avatar2').src= "./assets/img/pelicula1_3.jpg";
+                     break;
+                case "The phantom Menace":
+                     document.getElementById('avatar2').src= "./assets/img/pelicula1_4.jpg";
+                     break;
+                case "Attack of the Clones":
+                     document.getElementById('avatar2').src= "./assets/img/pelicula1_5.jpg";
+                     break;
+                case "Revenge of the Sith": 
+                     document.getElementById('avatar2').src= "./assets/img/pelicula1_2.jpg"; 
+                     break;
+                case "The Force Awakens": 
+                     document.getElementById('avatar2').src= "./assets/img/pelicula1_6.jpg"; 
+                     break;
+                default:
+                     document.getElementById('avatar2').src= "";     
+            }
+
+            document.getElementById('titulo').innerHTML = "Titulo: " + data.title;
+            document.getElementById('productor').innerHTML = "Productor: " + data.producer;
+            document.getElementById('director').innerHTML = "Director: " + data.director;
+            document.getElementById('fechalanza').innerHTML = "Fecha de lazamiento: " + data.release_date;
+        }
+    }
+    req.open('GET',films,true);
+    req.send();
+}
+
+//Buscar datos de peliculas con ajax
+function repositorioPlanetas(planets){
+    var data = [];
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function(){
+        if(this.readyState==4 && this.status == 200){
+            data = JSON.parse(this.responseText);
+            debugger
+            switch(data.name){
+                case "Hoth":
+                     document.getElementById('avatar3').src= "./assets/img/planeta1_1.png";
+                     break;
+                case "Dagobah": 
+                     document.getElementById('avatar3').src= "./assets/img/planeta1_2.jpg"; 
+                     break;  
+                case "Bespin":
+                    document.getElementById('avatar3').src = "./assets/img/planeta1_3.png";
+                    break; 
+                case "Endor": 
+                     document.getElementById('avatar3').src= "./assets/img/planeta1_4.png"; 
+                     break;  
+                case "Naboo": 
+                     document.getElementById('avatar3').src= "./assets/img/planeta1_5.jpg"; 
+                     break;     
+                case "Coruscant": 
+                     document.getElementById('avatar3').src= "./assets/img/planeta1_6.jpg"; 
+                     break; 
+                case "Alderaan": 
+                     document.getElementById('avatar3').src= "./assets/img/planeta1_7.jpg"; 
+                     break;     
+                default:
+                     document.getElementById('avatar3').src= "";     
+            }
+
+            document.getElementById('nombreP').innerHTML = "Nombre: " + data.name;
+            document.getElementById('diametro').innerHTML = "Diametro: " + data.diameter;
+            document.getElementById('clima').innerHTML = "Clima: " + data.climate;
+            document.getElementById('terreno').innerHTML = "Terreno: " + data.terrain;
+        }
+    }
+    req.open('GET',planets,true);
     req.send();
 }
 
