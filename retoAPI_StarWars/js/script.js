@@ -49,6 +49,7 @@ getP('https://swapi.co/api/people/',function(data){
 //Evento select
 function myFunction() {
     document.getElementById("info").style.visibility = "visible";
+    document.getElementById("imagen").style.display = "none";
     var url = document.getElementById("miSelect").value;
     repositorioPersonajes(url);
 }

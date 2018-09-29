@@ -3,3 +3,9 @@
     justify-content: center;
     margin: 10px 0px 50px 0px
 }
+
+.select2{
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 0px 0px
+}
