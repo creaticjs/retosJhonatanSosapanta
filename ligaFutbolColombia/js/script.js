@@ -1,7 +1,7 @@
 var dataEquipos = [
     {
         nombre: "La Equidad",
-        urlimagen: "https://upload.wikimedia.org/wikipedia/commons/0/09/La_Equidad.png",
+        urlimagen: "http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3849.png",
         dt: "Luis Fernando Suárez",
         jugadores: ["N. Barona, P.Lima, O Bernal, F. Nájera, S. Motta, J.Mahecha"],
         resena: "El Club Deportivo La Equidad, cuya razón social es Club Deportivo La Equidad Seguros Sociedad Anónima, ​ también conocido simplemente como La Equidad es un club de fútbol de la ciudad de Bogotá, Colombia.",

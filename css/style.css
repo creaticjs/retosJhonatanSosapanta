@@ -1,0 +1,330 @@
+/*-- banner --*/
+
+.carousel .item {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner1.png) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner1.png) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner1.png) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner1.png) no-repeat;
+    background-size: cover;
+}
+
+.carousel .item.item2 {
+    background: -webkit-linear-gradient(rgba(22, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner2.png) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner2.png) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner2.png) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner2.png) no-repeat;
+    background-size: cover;
+}
+
+.carousel .item.item3 {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner3.png) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner3.png) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner3.png) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner3.png) no-repeat;
+    background-size: cover;
+}
+
+.carousel .item.item4 {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner4.png) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner4.png) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner4.png) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.2)), url(../assets/img/banner/banner4.png) no-repeat;
+    background-size: cover;
+}
+
+.carousel-caption h2,
+.carousel-caption h3 {
+    font-size: 4em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.carousel-caption h2 span,
+.carousel-caption h3 span {
+    font-weight: 600;
+}
+
+.carousel-caption p {
+    letter-spacing: 7px;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #fff;
+    margin: 1em 0 2em 0;
+}
+
+.carousel-caption a {
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 11px 20px;
+    background: none;
+    font-size: 0.9em;
+    border-radius: 0;
+    border: 1px solid #fff;
+}
+
+.carousel-caption a:hover {
+    background: #ee4f4f;
+    border: 1px solid #ee4f4f;
+}
+
+.codes {
+    padding: 5em 0;
+    background: #fff;
+}
+
+.codes.agileitsbg2 {
+    background: #E74C3C;
+    background-image: -webkit-linear-gradient(#ff9d2f, #ff6126);
+    background-image: -moz-linear-gradient(#ff9d2f, #ff6126);
+    background-image: -ms-linear-gradient(#ff9d2f, #ff6126);
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    padding-bottom: 10em;
+}
+
+.codes.agileitsbg3 {
+    background: #3498DB;
+    padding-bottom: 10em;
+}
+
+.codes.agileitsbg4 {
+    background: #2ECC71;
+    padding-bottom: 10em;
+}
+
+.carousel.slide.grid_3.grid_4 {
+    border-top: 10px solid #3ACFD5;
+    border-bottom: 10px solid #3a4ed5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: 10px 100%;
+    -moz-background-size: 10px 100%;
+    background-size: 10px 100%;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=), url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+    background-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%), -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    background-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%), -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    background-image: -o-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%), -o-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%), linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+}
+
+.carousel-indicators {
+    bottom: 5%;
+    left: 50%;
+}
+
+.carousel-caption {
+    position: inherit;
+    min-height: 650px !important;
+    padding-top: 16em;
+    text-align: center;
+}
+
+.carousel-control {
+    line-height: 35em;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border: 2px solid #fff;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0px 4px;
+    border: 2px solid #3498DB;
+    background: #3498DB;
+}
+
+/* Show it is fixed to the top */
+
+.top-buttons {
+    margin: 2em auto 0;
+    text-align: center;
+    width: 24%;
+}
+
+.bnr-button {
+    float: left;
+}
+
+.bnr-button a {
+    text-decoration: none;
+    padding: .8em 1.5em;
+    text-align: center;
+    border: solid 2px #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 0.75em;
+    display: inline-block;
+}
+
+a.act {
+    border: solid 2px #3498DB;
+    background-color: #3498DB;
+}
+
+.bnr-button a:hover {
+    border: solid 2px #3498DB;
+    background-color: #3498DB;
+}
+
+a.two.scroll {
+    margin-left: 10px;
+}
+
+/*-- //banner --*/
+
+/*-- /banner_bottom --*/
+
+.banner_bottom_left h4 {
+    font-size: 1.5em;
+    color: #3c3c3c;
+    letter-spacing: 1px;
+    position: relative;
+    font-weight: 600;
+    line-height: 1.6em;
+    margin-bottom: 1em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.help_full img,
+.help_full img {
+    width: 100%;
+}
+
+.news-main {
+    margin-top: 4em;
+}
+.news-main2 {
+    margin-top: 4em;
+}
+
+.banner_bottom_left p {
+    margin-bottom: 1em;
+}
+
+.banner_bottom {
+    padding: 7em 0;
+}
+
+.news-left {
+    padding-left: 0;
+}
+
+.b_left {
+    padding: 0;
+}
+
+.b_right {
+    padding: 0;
+}
+
+.news-right h4 {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+p.sub_p {
+    margin: 1.2em 0;
+}
+
+.ab_info {
+    margin-bottom: 2em;
+}
+
+.ab_info h4 {
+    margin-top: 1em;
+    font-size: 1.4em;
+}
+
+.banner_bottom_in {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.banner_bottom_in img {
+    background-color: #ebeeef;
+    padding: 0.5em;
+}
+
+.banner_bottom_in p {
+    margin: 2em 0;
+}
+
+.ab_button {
+    float:none;
+	text-align:center;
+}
+
+.ab_button a {
+    padding: 0.8em 2em;
+    color: #FFF;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    background: #3498DB;
+    border: 2px solid #3498DB;
+    border-radius: 5;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.ab_button a:hover {
+    background: #344569;
+    border: 2px solid #344569;
+    color: #fff;
+}
+
+.banner_bottom_in h3 {
+    line-height: 1.3em;
+}
+
+.banner_bottom_in iframe {
+    width: 600px;
+    min-height: 333px;
+    border: 6px solid #ddd;
+    margin-top: 3em;
+}
+
+.news-main {
+    margin-top: 4em;
+    background: url(../assets/img/plantilla/lineacolores.png) no-repeat;
+    padding-top: 4em;
+}
+
+.news-main {
+    margin-top: 4em;
+    padding-top: 4em;
+}
+
+.banner_bottom_grid_left_grid span {
+    font-size: 2em;
+    color: #76daff;
+    line-height: 62px;
+}
+
+.banner_bottom_grid_right h4 {
+    font-size: 1.2em;
+    margin-bottom: .7em;
+    font-weight: 600;
+    color: #222222;
+    letter-spacing: 1px;
+}
+
+.banner_bottom_grid_right p {
+    line-height: 1.9em;
+}
+
