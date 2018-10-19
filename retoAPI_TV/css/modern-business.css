@@ -15,13 +15,71 @@ body {
 }
 
 .carousel-item {
-  height: 65vh;
+  height: 70vh;
   min-height: 300px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.carousel .item2 {
+  height: 70vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background: url(http://style.shockvisual.net/wp-content/uploads/2014/08/Bitten_detail_2560x1450_1280x725_105372227592.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel .item4 {
+  height: 70vh;
+  min-height: 0px;
+  background: url(http://www.icmedianet.org/wp/ndog/wp-content/uploads/2015/06/true_detective.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel .item10 {
+  height: 70vh;
+  min-height: 300px;
+  background: url(https://www.instacinefilos.com.br/wp-content/uploads/2018/07/Gotham.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel .item12 {
+  height: 70vh;
+  min-height: 300px;
+  background: url(https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/05/the-flash-season-5-release-date-news-villain-story.jpg?itok=kLj80zyQ) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel .item14 {
+  height: 70vh;
+  min-height: 300px;
+  background: url(https://i.ytimg.com/vi/nVVHd5dwHbE/maxresdefault.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bodySeries{
+  background-color: #464d53;
+}
+.letrasBlancas{
+  color: white;
 }
 
 .portfolio-item {

@@ -22,30 +22,33 @@ getP('http://api.tvmaze.com/shows',function(data){
         personajes.push(data);
 
         var cont = document.getElementById("contenedor");
+        var cont2 = document.getElementById("contenedor2");
         var series = "";
+        var estrenos = "";
 
         personajes.forEach(item => {
             let array = Array.from(item)
             for (var i = 0; i < array.length; i++) {
-                series += "<div class='col-lg-4 col-sm-6 portfolio-item' class='expandable'>" + "<div class='card h-80'>" + "<a href='"+ array[i].url +"'><img class='card-img-top' src='"+ array[i].image.medium +"' alt=''></a>" + 
-                          "<div class='card-body'>" + "<h4 class='card-title'></h4>" + "<a>"+ "<strong>" + array[i].name + "</strong>" +"</a>" + "</h4>" + "<p class='card-text'>"+ array[i].summary +"</p>" + 
+                var res = array[i].summary.slice(0,150);
+                var arrayy = array[i].premiered.split('');
+                var ano = parseInt(arrayy[0] + arrayy[1] + arrayy[2] + arrayy[3])
+                if(ano === 2014 & i < 15){
+                    if(i===2){
+                        estrenos += "<div class='carousel-item item" + i + " active'>" + "<div class='carousel-caption d-none d-md-block'>" + 
+                         "</div>" + "</div>"
+                    }else{
+                        estrenos += "<div class='carousel-item item" + i + "'>" + "<div class='carousel-caption d-none d-md-block'>" + 
+                         "</div>" + "</div>"
+                    }
+                    i += 1;
+                }
+                series += "<div class='col-lg-4 col-sm-6 portfolio-item'" + "<div class='card h-80'>" + "<a href='"+ array[i].url +"'><img class='card-img-top' src='"+ array[i].image.medium +"' alt=''></a>" + 
+                          "<div class='card-body letrasBlancas'>" + "<h4 class='card-title'></h4>" + "<a>"+ "<strong class='letrasBlancas'>" + array[i].name + "</strong>" +"</a>" + "</h4>" + "<p class='card-text'>"+ res +"</p>" + 
                           "</div>" + "</div>" + "</div>"
-                cont.innerHTML = series;
             }
+            cont2.innerHTML = estrenos;
+            cont.innerHTML = series;
         });
-});
-
-$(document).ready(function() {
-    // use esta configuracion simple para valores por defecto
-    //$('div.expandable p').expander();
-    // *** O ***
-    // configure de la siguiente manera
-    $('div.expandable p').expandText({
-    slicePoint: 50, // si eliminamos por defecto es 100 caracteres
-    expandText: '[...]', // por defecto es 'read more...'
-    collapseTimer: 5000, // tiempo de para cerrar la expanción si desea poner 0 para no cerrar
-    userCollapseText: '[^]' // por defecto es 'read less...'
-  });
 });
 
 // //Evento select
